@@ -1,0 +1,465 @@
+.dashboard {
+    .intro {
+        .back__effect {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url("../../images/back_image.webp");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-x: 60%;
+
+            > div {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                @include title__hover;
+
+                h1 {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+
+                @media screen and (max-width: 992px) {
+                    top: 50%;
+
+                    h1 {
+                        font-size: 50px;
+                    }
+                }
+
+                @media screen and (max-width: 768px) {
+                    top: 50%;
+
+                    h1 {
+                        font-size: 40px;
+                    }
+                }
+
+                @media screen and (max-width: 350px) {
+                    h1 {
+                        font-size: 10vw;
+                    }
+                }
+            }
+
+            span {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 200px;
+                background: linear-gradient(to top, #1e0500, transparent);
+            }
+
+            button {
+                background-color: transparent;
+                outline: 0;
+                border: 0;
+                position: absolute;
+                bottom: 150px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+
+                img {
+                    width: 30px;
+                    pointer-events: none;
+                    animation: scroll-button infinite 1.2s linear;
+                }
+
+                @keyframes scroll-button {
+                    0% {
+                        transform: translate(0, 0);
+                    }
+                    50% {
+                        transform: translate(0, 20px);
+                    }
+                    100% {
+                        transform: translate(0, 0);
+                    }
+                }
+            }
+        }
+    }
+
+    .metrix {
+        position: relative;
+        background-image: url("../../images/bg-1.webp");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 0 60%;
+        padding: 20px;
+
+        > div {
+            padding: 20px;
+
+            > span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                h2 {
+                    @include title__hover;
+                    @include title__bar;
+                }
+            }
+        }
+
+        > img {
+            position: absolute;
+            width: 200px;
+            top: 5%;
+            left: 10%;
+            animation: tank1_icon infinite 3s linear;
+
+            @media screen and (max-width: 576px) {
+                display: none;
+            }
+        }
+
+        @keyframes tank1_icon {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(30px, 20px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    }
+
+    .howitwork {
+        background-image: url("../../images/bg-2.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        padding: 20px;
+
+        > div {
+            > span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                h2 {
+                    @include title__hover;
+                    @include title__bar;
+                }
+            }
+
+            .how {
+                position: relative;
+                padding: 10px;
+                background-color: var(--bg-secondary);
+                border: 1px solid transparent;
+                border-radius: 20px;
+                text-align: center;
+
+                img {
+                    width: 100%;
+                }
+
+                h5 {
+                    width: 100%;
+                    position: absolute;
+                    top: -55px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    color: white;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: url("../../images/arrow.webp");
+                    width: 50px;
+
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
+                }
+            }
+
+            .even {
+                background: linear-gradient(
+                            var(--bg-secondary),
+                            var(--bg-secondary)
+                        )
+                        padding-box,
+                    linear-gradient(to top, var(--bg-primary), transparent 60%)
+                        border-box;
+            }
+
+            .odd {
+                background: linear-gradient(
+                            var(--bg-secondary),
+                            var(--bg-secondary)
+                        )
+                        padding-box,
+                    linear-gradient(
+                            to bottom,
+                            var(--bg-primary),
+                            transparent 60%
+                        )
+                        border-box;
+            }
+
+            .count0 {
+                &::before {
+                    top: 50%;
+                    right: -35px;
+                    transform: scale(0.4) translateY(-50%);
+                }
+            }
+
+            .count1 {
+                &::before {
+                    top: 50%;
+                    right: -35px;
+                    transform: scale(0.4) translateY(-50%);
+                }
+            }
+
+            .count2 {
+                &::before {
+                    bottom: -70px;
+                    left: 50%;
+                    transform: scale(0.4) translateX(-100%) rotate(90deg);
+                }
+            }
+
+            .count3 {
+                &::before {
+                    top: 50%;
+                    left: -65px;
+                    transform: scale(0.4) translateY(-50%);
+                }
+            }
+
+            .count4 {
+                &::before {
+                    top: -90px;
+                    left: 50%;
+                    transform: scale(0.4) translateX(-100%) rotate(-90deg);
+                }
+            }
+
+            .count5 {
+                &::before {
+                    top: 50%;
+                    left: -65px;
+                    transform: scale(0.4) translateY(-50%);
+                }
+            }
+        }
+
+        > img {
+            position: absolute;
+            bottom: 5%;
+            right: 10%;
+            width: 150px;
+
+            animation: tank2_icon infinite 3s linear;
+
+            @media screen and (max-width: 576px) {
+                display: none;
+            }
+        }
+
+        @keyframes tank2_icon {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(-50px, 10px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    }
+
+    .gamemode {
+        position: relative;
+        width: 85%;
+        margin: 0 auto 0;
+
+        .light_top {
+            position: absolute;
+            top: 20%;
+            left: 0;
+            border-radius: 50%;
+            box-shadow: 0 0 160px 30px rgb(163, 92, 0), 0 0 100px 60px #7a4424,
+                0 0 250px 190px #993800;
+        }
+
+        .light_bottom {
+            position: absolute;
+            bottom: 10%;
+            right: 0;
+            border-radius: 50%;
+            box-shadow: 0 0 60px 30px rgb(163, 92, 0), 0 0 100px 60px #7a4424,
+                0 0 150px 90px #993800;
+        }
+
+        .icon {
+            position: absolute;
+            width: 200px;
+            bottom: -50px;
+            left: 5%;
+            animation: tank3_icon infinite 3s linear;
+
+            @media screen and (max-width: 576px) {
+                display: none;
+            }
+        }
+
+        @keyframes tank3_icon {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(30px, 10px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        > div {
+            > span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                h2 {
+                    @include title__hover;
+                    @include title__bar;
+                }
+            }
+
+            .gamemode {
+                position: relative;
+                transition: 0.3s ease-in-out;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                    border-radius: 20px;
+                }
+
+                > span {
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    background: linear-gradient(
+                        to top,
+                        var(--bg-secondary) 20%,
+                        transparent
+                    );
+                    border: 1px solid #4d1107;
+                    border-radius: 20px;
+                    color: var(--font-third);
+                }
+
+                &:hover {
+                    transform: translateY(-20px);
+
+                    > span {
+                        border: 1px solid var(--font-third);
+                        background: linear-gradient(
+                            to top,
+                            var(--bg-primary) 15%,
+                            transparent
+                        );
+                        color: var(--font-white-color);
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            width: 100%;
+        }
+    }
+
+    .news {
+        padding: 20px;
+        background-image: url("../../images/bg-2.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        > div {
+            > span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                h2 {
+                    @include title__hover;
+                    @include title__bar;
+                }
+            }
+
+            .news__item {
+                padding: 20px;
+                background-color: var(--bg-secondary);
+                border-radius: 20px;
+                text-align: center;
+
+                img {
+                    width: 100%;
+                }
+
+                h4 {
+                    color: var(--font-primary);
+                }
+
+                a {
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--font-white-color);
+                    }
+                }
+            }
+        }
+    }
+
+    .partner {
+        padding: 20px;
+        background-image: url("../../images/bg-3.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+
+        > div {
+            > span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                h2 {
+                    @include title__hover;
+                    @include title__bar;
+                }
+            }
+
+            .partner__item {
+                padding: 20px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

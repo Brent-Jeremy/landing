@@ -1,0 +1,363 @@
+.dftl {
+    .intro {
+        .back__effect {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url("../../images/dftl_bg_1.webp");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-x: 60%;
+
+            > div {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+
+                h1 {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    @include title__hover;
+                }
+
+                h4 {
+                    color: var(--font-white-color);
+                }
+
+                button {
+                    outline: 0;
+                    border: 0;
+                    padding: 20px 50px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    background-color: var(--bg-primary);
+
+                    &:hover {
+                        color: var(--font-white-color);
+                    }
+                }
+
+                @media screen and (max-width: 992px) {
+                    top: 50%;
+
+                    h1 {
+                        font-size: 50px;
+                    }
+                }
+
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                    top: 50%;
+
+                    h1 {
+                        font-size: 40px;
+                    }
+                }
+
+                @media screen and (max-width: 350px) {
+                    h1 {
+                        font-size: 10vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .concept {
+        > span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            h2 {
+                @include title__hover;
+                @include title__bar;
+            }
+        }
+
+        .concept__item {
+            position: relative;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 20px;
+            background-color: #482219;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: 0.2s ease-in;
+            min-height: 450px;
+
+            p {
+                line-height: 1.6rem;
+            }
+
+            > span {
+                background-color: #482219;
+                min-height: 100px;
+                position: absolute;
+                box-shadow: 0 5px 10px var(--font-dark-color);
+                border-radius: 10px;
+                bottom: 100%;
+                left: 50%;
+                transform: translate(-50%, 40px);
+                width: 90%;
+                padding: 0 10px;
+                color: white;
+
+                h5 {
+                    font-size: 22px;
+                }
+            }
+
+            &:hover {
+                background-color: rgb(83, 40, 4);
+                border: 1px solid #f3903a;
+                color: var(--font-secondary);
+
+                > span {
+                    background-color: #f3903a;
+                }
+            }
+
+            @media screen and (max-width: 1300px) {
+                > span {
+                    min-height: 150px;
+                }
+
+                min-height: 470px;
+            }
+
+            @media screen and (max-width: 992px) {
+                > span {
+                    h5 {
+                        font-size: 20px;
+                    }
+                }
+
+                min-height: 680px;
+            }
+
+            @media screen and (max-width: 768px) {
+                > span {
+                    h5 {
+                        font-size: 17px;
+                    }
+                }
+
+                p {
+                    line-height: 1.2rem;
+                    font-size: 15px;
+                }
+
+                min-height: 500px;
+            }
+
+            @media screen and (max-width: 576px) {
+                min-height: 300px;
+
+                > span {
+                    min-height: unset;
+                }
+
+                p {
+                    line-height: 1.6rem;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .ecosystem {
+        position: relative;
+        background-color: #f3903a;
+        background-image: url("../../images/dftl_bg_2.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: 60%;
+
+        > div {
+            > span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                h2 {
+                    @include title__hover;
+                    @include title__bar;
+                }
+            }
+
+            img {
+                width: 100%;
+                padding: 20px;
+            }
+        }
+    }
+
+    .stake {
+        position: relative;
+
+        > div {
+            padding: 20px;
+
+            .light_top {
+                position: absolute;
+                top: 20%;
+                left: 0;
+                border-radius: 50%;
+                box-shadow: 0 0 160px 30px rgb(122, 70, 1),
+                    0 0 100px 60px #461e07, 0 0 250px 190px #4b1b00;
+            }
+
+            .light_bottom {
+                position: absolute;
+                bottom: 10%;
+                right: 0;
+                border-radius: 50%;
+                box-shadow: 0 0 60px 30px rgb(163, 92, 0),
+                    0 0 100px 60px #7a4424, 0 0 150px 90px #993800;
+            }
+
+            .staking__content {
+                > span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    h2 {
+                        @include title__hover;
+                        @include title__bar;
+                    }
+                }
+
+                h4 {
+                    color: var(--font-white-color);
+                }
+
+                button {
+                    font-size: 18px;
+                    font-weight: bold;
+                    padding: 12px 70px;
+                    background-color: var(--bg-primary);
+                    color: var(--font-secondary);
+                    border-radius: 50px;
+                    transition: 0.3s ease-in;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--font-white-color);
+                    }
+                }
+
+                @media screen and (max-width: 576px) {
+                    > span {
+                        justify-content: center;
+                    }
+
+                    h4 {
+                        text-align: center;
+                    }
+
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .apy__diagram {
+                width: 100%;
+            }
+        }
+    }
+
+    .stake__metrix {
+        > div {
+            > span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                h2 {
+                    @include title__hover;
+                    @include title__bar;
+                }
+            }
+        }
+    }
+
+    .available {
+        > div {
+            > span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                h2 {
+                    @include title__hover;
+                    @include title__bar;
+                }
+            }
+
+            .links {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: 20px;
+
+                @mixin common__back {
+                    width: 100%;
+                    transition: 0.2s ease-in;
+                    padding: 30px 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    > div {
+                        text-align: center;
+                        img {
+                            width: 120px;
+                            height: 120px;
+                            transition: 0.3s ease-in-out;
+                            cursor: pointer;
+
+                            @media screen and (max-width: 576px) {
+                                width: 50%;
+                                height: unset;
+                            }
+                        }
+
+                        &:hover {
+                            img {
+                                transform: translateY(-12px);
+                            }
+                        }
+                    }
+                }
+
+                span:nth-child(1) {
+                    @include common__back;
+                    background: linear-gradient(
+                        to left,
+                        var(--bg-primary),
+                        var(--bg-secondary)
+                    );
+                }
+
+                span:nth-child(2) {
+                    @include common__back;
+                    background: linear-gradient(
+                        to right,
+                        var(--bg-primary),
+                        var(--bg-secondary)
+                    );
+                }
+            }
+        }
+    }
+}

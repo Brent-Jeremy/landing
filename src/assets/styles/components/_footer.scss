@@ -1,0 +1,75 @@
+.footer {
+    background-color: var(--bg-primary);
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto 0;
+    border-radius: 30px;
+
+    > div {
+        a {
+            color: var(--font-secondary);
+            font-size: 30px;
+            padding: 0 20px;
+            transition: 0.3s ease-in;
+
+            &:hover {
+                color: var(--font-white-color);
+            }
+        }
+
+        .search__box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: 10px auto 10px;
+
+            input {
+                width: 100%;
+                outline: 0;
+                border: 0;
+                padding: 10px;
+                border-radius: 50px 0 0 50px;
+            }
+
+            button {
+                outline: 0;
+                border: 0;
+                padding: 10px;
+                color: var(--font-primary);
+                background-color: var(--bg-secondary);
+                border-radius: 0 20px 20px 0;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--font-white-color);
+                }
+            }
+
+            @media screen and (max-width: 992px) {
+                width: 100%;
+            }
+        }
+
+        .logo {
+            position: absolute;
+            bottom: 0;
+            background-image: url("../../images/tanklogo.webp");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            width: 250px;
+            height: 100px;
+            left: 50%;
+            translate: calc(-50%);
+
+            @media screen and (max-width: 992px) {
+                width: 150px;
+                height: 70px;
+            }
+
+            @media screen and (max-width: 769px) {
+                display: none;
+            }
+        }
+    }
+}
